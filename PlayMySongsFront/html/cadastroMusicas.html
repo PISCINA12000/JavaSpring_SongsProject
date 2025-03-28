@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Cadastrar Músicas...</title>
+    <script src="../js/cadastroController.js"></script>
+</head>
+
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a href="../index.html" class="navbar-brand">Menu Principal</a>
+        </div>
+    </nav>
+    <div class="formulario">
+        <form class="form" enctype="multipart/form-data" method="POST" id="fform">
+            <div class="subtitle">Cadastre aqui suas músicas no WebPlayer!</div>
+            <label for="estilo">Estilos</label>
+            <select name="estilo" id="estilo">
+                <option selected>Escolha o estilo</option>
+                <option>Louvor</option>
+                <option>Gospel</option>
+                <option>Sertanejo</option>
+                <option>Moda de Viola</option>
+                <option>Pop</option>
+                <option>Rock</option>
+                <option>Forro</option>
+            </select>
+            <label for="nome">Nome da Música</label>
+            <input type="text" id="nome" name="nome" placeholder="Nome da música" class="input">
+            <label for="cantor">Nome do Cantor</label>
+            <input type="text" id="cantor" name="cantor" placeholder="Nome do cantor" class="input">
+            <label for="file">Escolha seu arquivo</label>
+            <input type="file" name="arquivo" id="arquivo" placeholder="Arquivo" class="input">
+            <button class="submit" onclick="EnviarArquivo(event)">enviar</button>
+        </form>
+    </div>
+    <br>
+    <div id="mensagem" style="background-color: red"></div>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Web Player</title>
+    <script src="js/indexController.js"></script>
+</head>
+
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <form class="d-flex" role="search" enctype="multipart/form-data" method="post" id="formBusca">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"  id="busca" name="busca">
+                <button class="btn btn-outline-success" type="submit" onclick="pesquisar(event)">search</button>
+            </form>
+        </div>
+        <a href='/html/cadastroMusicas.html' class='navbar-brand'>Cadastrar Músicas</a>
+    </nav>
+
+    <div id="lista"></div>
+    <script>listarMusicas()</script>
+    <div id="mensagem" style="background-color: red"></div>
+
+</body>
+
+</html>
